@@ -1,3 +1,24 @@
 ## Route de test
 
-GET http://localhost:4500/v1/hello
+GET http://localhost:4500/v1/games
+###
+
+## findOne
+
+GET http://localhost:4500/v1/games/1
+
+###
+
+## add game
+
+POST http://localhost:4500/v1/games
+Content-Type: application/json
+
+{
+    "name": "best game eu",
+    "author": "Adoy",
+    "editor": "parker brother",
+    "min_players":2,
+    "max_players":10,
+    "min_age":15
+}

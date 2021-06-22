@@ -48,9 +48,7 @@ class Boardgame {
   async save() {
     try {
       if(this.id){
-
-      }else{
-        const {rows} = db.query(`SELECT add_boardgame($1, $2, $3, $4, $5, $6) AS id`, [
+        const {rows} = await db.query(`SELECT update_boardgame($1, $2, $3, $4, $5, $6) AS id`, [
           this.name,
           this.author, 
           this.editor,
@@ -58,6 +56,18 @@ class Boardgame {
           this.max_players,
           this.min_age
         ]);
+      }else{
+        console.log("je crée");
+        const {rows} = await db.query(`SELECT add_boardgame($1, $2, $3, $4, $5, $6) AS id`, [
+          this.name,
+          this.author, 
+          this.editor,
+          this.min_players,
+          this.max_players,
+          this.min_age
+        ]);
+        console.log(rows);
+        this.id = rows[0].id;
       }
     } catch (error) {
       if (error.detail) {
@@ -67,4 +77,6 @@ class Boardgame {
       }
     }
   }
-}
+};
+
+module.exports = Boardgame;
