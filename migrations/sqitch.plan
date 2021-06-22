@@ -2,3 +2,4 @@
 %project=boardgame
 
 init 2021-06-22T11:52:46Z Adoy <trillot.maxime44@gmail.com> # creation de la table boardgame
+api/boardgame_functions 2021-06-22T12:41:36Z Adoy <trillot.maxime44@gmail.com> # ajout de la fonction d'insertion et de mise a jour de boardgame
