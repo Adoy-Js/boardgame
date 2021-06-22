@@ -1,0 +1,1 @@
+JEU DE SOCIETE: nom, auteur, editeur, nb de joueurs minimum, nb de joueurs maximum, age minimum
